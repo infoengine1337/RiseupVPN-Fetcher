@@ -8,7 +8,7 @@ proto tcp-client
 dev tun0
 auth SHA1
 cipher AES-128-CBC
-tls-cipher DHE-RSA-AES128-SHA1
+tls-cipher DHE-RSA-AES128-SHA
 keepalive 10 30
 float
 
@@ -70,7 +70,7 @@ def main():
     for index, cand in enumerate(cand_list):
         ovpn =  ovpn_txt_temp.format(cand["ip"], cand["port"], r_ca, r_cert, r_key)
 
-        with open("./ovpn/ovpn_{}_{}.ovpn".format(index, cand["host"]), "w") as f:
+        with open("./ovpn/ovpn_{}_{}_{}.ovpn".format(index, cand["host"], cand["location"]), "w") as f:
             f.write(ovpn)
     
     print("All have done!!")
