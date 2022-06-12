@@ -12,7 +12,7 @@ tls-cipher DHE-RSA-AES128-SHA
 keepalive 10 30
 float
 
-persist-tun0
+persist-tun
 persist-key
 resolv-retry infinite
 
