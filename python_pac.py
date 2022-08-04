@@ -62,7 +62,7 @@ def main():
         print(i)
 
     print("Creating OVPN config file...")
-    r_ca = r_crt_txt.split("-----END CERTIFICATE-----")[0] + "-----END CERTIFICATE-----"
+    r_ca = r_crt_txt.split("-----END CERTIFICATE-----")[1] + "-----END CERTIFICATE-----"
     r_cert = r_pem_txt.split("-----END RSA PRIVATE KEY-----")[1]
     r_key = r_pem_txt.split("-----END RSA PRIVATE KEY-----")[0] + "-----END RSA PRIVATE KEY-----"
 
